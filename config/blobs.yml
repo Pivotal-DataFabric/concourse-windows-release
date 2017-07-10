@@ -1,3 +1,7 @@
+concourse_windows/concourse_windows_amd64-v2.7.3.exe:
+  size: 46609920
+  object_id: 9f94e3f5-9146-4625-78ef-0e65285153d1
+  sha: 2b4814bad39f6b8192ddfe6440c0e7ed2c934e4e
 concourse_windows/concourse_windows_amd64-v3.2.1.exe:
   size: 43610624
   object_id: 636cd51d-2a9b-475e-64fa-61f409ca0db4

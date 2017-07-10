@@ -24,3 +24,6 @@ bosh-lite/deployments/*
 bosh-lite/tmp/*
 pkg
 consul-certs/
+# Creating a release tarball lands it in top-level of repository
+*.tgz
+
