@@ -1,11 +1,13 @@
 # Get rid of bosh's tar binary from the path which causes errors while extracting diego-release
 $env:Path = ($env:Path.Split(';') | Where-Object { $_ -ne 'c:\var\vcap\bosh\bin' }) -join ';'
+$guid = [GUID]::NewGuid()
 C:\var\vcap\packages\concourse_windows\concourse_windows_amd64.exe worker `
     /work-dir <%= p("concourse_windows.work_dir") %> `
     /tsa-host <%= p("concourse_windows.tsa_host") %> `
     /tsa-public-key C:\var\vcap\jobs\concourse_windows\bin\tsa-public-key.pub `
     /tsa-worker-private-key C:\var\vcap\jobs\concourse_windows\bin\tsa-worker-private-key `
     /bind-ip <%= p("concourse_windows.bind_ip") %> `
+    /name $guid `
     /baggageclaim-bind-ip <%= p("concourse_windows.baggageclaim_bind_ip") %> `
     <% p("concourse_windows.tags").each do |tag| %>/tag <%= tag %> <% end %> `
     <%= "/team #{p("concourse_windows.team")}" if !p("concourse_windows.team").empty? %>
