@@ -1,6 +1,6 @@
 # concourse-windows-release
 
-Bosh deployment manifest:
+## Bosh deployment manifest
 
 ```
 ---
@@ -46,7 +46,7 @@ instance_groups:
             -----END RSA PRIVATE KEY-----
 ```
 
-Relevent sections of a bosh cloud config:
+## Relevent sections of a bosh cloud config
 
 ```
 azs:
@@ -81,7 +81,7 @@ compilation:
   network: internal
 ```
 
-Example concourse pipeline:
+## Example concourse pipeline
 
 ```
 ---
